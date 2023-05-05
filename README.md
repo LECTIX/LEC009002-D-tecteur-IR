@@ -69,9 +69,14 @@ platformio run --target fuses && platformio run --target upload
 Peut se faire simplement en utilisant kikit :
 
 ```
-cd hardware
+cd hardware/carte-mere
 docker run --rm -w /kikit -v $PWD:/kikit yaqwsx/kikit kikit fab jlcpcb --assembly --no-drc --schematic LEC009002.kicad_sch --field LCSC --corrections JLCPCB_CORRECTION --nametemplate LEC009002_{} LEC009002.kicad_pcb prod/
 
+cd hardware/capteur-droit
+docker run --rm -w /kikit -v $PWD:/kikit yaqwsx/kikit kikit fab jlcpcb --assembly --no-drc --schematic LEC009202.kicad_sch --field LCSC --corrections JLCPCB_CORRECTION --nametemplate LEC009202_{} LEC009202.kicad_pcb prod/
+
+cd hardware/capteur-coude
+docker run --rm -w /kikit -v $PWD:/kikit yaqwsx/kikit kikit fab jlcpcb --assembly --no-drc --schematic LEC009212.kicad_sch --field LCSC --corrections JLCPCB_CORRECTION --nametemplate LEC009212_{} LEC009212.kicad_pcb prod/
 ```
 ## Notices
 [Manuel FR](docs/manual_fr.pdf)
