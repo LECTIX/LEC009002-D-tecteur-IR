@@ -54,8 +54,7 @@ Installez kicad 6 (ou version supérieure), et ouvrez le fichier LEC009002.kicad
 
 Pour programmer le module, vous devez posséder
 - un programmateur AVR type USBASP
-- Un adaptateur 10 pin vers 6 pin
-- Un connecteur de type header 2 x 6 pour connecter l'adaptateur à la carte
+- Des fils pour relier le programmateur avec les points de programmation. (**Note importante** : cette carte ne possède pas de connecteur de programmation. Pour la programmer, il vous faudra soit utiliser le banc de programmation pour lequel vous souderez des pogo pins, soit trouver un moyen de relier les fils du programmateur à la carte directement)
 
 Le firmware se trouve dans le dossier du même nom. Il est recommandé d'utiliser VS-code et platform-io pour programmer la carte. Pour ce faire, branchez le programmateur à votre PC et à la carte à programmer, puis rentrer les commandes suivantes :
 
